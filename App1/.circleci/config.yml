@@ -1,7 +1,13 @@
 version: 2
-	jobs:
-		build:
-	working_directory: /go/src//github.com/saurav5151/NodeApp	
-	docker:
-		- image: circleci/node:7	
-
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+      - run:
+          name: Print the Current Time
+          command: date
