@@ -1,11 +1,7 @@
 version: 2
 	jobs:
 		build:
-	working_directory: ~/tmp	
+	working_directory: /go/src//github.com/saurav5151/NodeApp	
 	docker:
 		- image: circleci/node:7	
-	steps:
-		- checkout
-		- run: npm install
-		- rub: npm test
 
